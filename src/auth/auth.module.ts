@@ -26,7 +26,7 @@ import { Auth } from './decorators'
                 return {
                     secret: configService.get('SECRET_KEY'),
                     signOptions: { 
-                        expiresIn:  configService.get('EXPIRE_TOKEN') || '15m',
+                        expiresIn:  configService.get('EXPIRE_TOKEN') || '10m',
                     },
                 }
             },

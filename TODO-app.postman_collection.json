@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "5a82c9fd-d642-4658-81e6-623210d7c2db",
+		"name": "TODO-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39959602"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullname\": \"estefany castaño serna\",\r\n    \"email\": \"stefacs14@gmail.com\",\r\n    \"password\": \"Santiago123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//     \"email\": \"santiscano@gmail.com\",\r\n//     \"password\": \"Santiago123\"\r\n// }\r\n{\r\n    \"email\": \"stefacs14@gmail.com\",\r\n    \"password\": \"Santiago123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6ImVzdGVmYW55IGNhc3Rhw7FvIHNlcm5hIiwiZW1haWwiOiJzdGVmYWNzMTRAZ21haWwuY29tIiwiaWF0IjoxNzM0MTk3OTE2LCJleHAiOjE3MzQyMDA2MTZ9.JNjqoHcuM-vSJC2zfgvUa2ON87LVMmgBoR40H0e1Z88",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"crear tarea estefa\",\r\n    \"description\": \"probar todo el crud\"\r\n    //\"userId\": 2 // extraer del token\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read one",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6ImVzdGVmYW55IGNhc3Rhw7FvIHNlcm5hIiwiZW1haWwiOiJzdGVmYWNzMTRAZ21haWwuY29tIiwiaWF0IjoxNzM0MTk3OTE2LCJleHAiOjE3MzQyMDA2MTZ9.JNjqoHcuM-vSJC2zfgvUa2ON87LVMmgBoR40H0e1Z88",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/task/fe30a79d-75c0-4c4b-a013-4107a630467c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"task",
+						"fe30a79d-75c0-4c4b-a013-4107a630467c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6ImVzdGVmYW55IGNhc3Rhw7FvIHNlcm5hIiwiZW1haWwiOiJzdGVmYWNzMTRAZ21haWwuY29tIiwiaWF0IjoxNzM0MTk3OTE2LCJleHAiOjE3MzQyMDA2MTZ9.JNjqoHcuM-vSJC2zfgvUa2ON87LVMmgBoR40H0e1Z88",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6ImVzdGVmYW55IGNhc3Rhw7FvIHNlcm5hIiwiZW1haWwiOiJzdGVmYWNzMTRAZ21haWwuY29tIiwiaWF0IjoxNzM0MTk3OTE2LCJleHAiOjE3MzQyMDA2MTZ9.JNjqoHcuM-vSJC2zfgvUa2ON87LVMmgBoR40H0e1Z88",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"actualizacion hexagonal\",\r\n    \"description\": \"actualizar tarea con preload\",\r\n    \"status\": \"IN_PROGRESS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/task/6ce5fde7-f0d8-40a5-8116-165647ba40c8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"task",
+						"6ce5fde7-f0d8-40a5-8116-165647ba40c8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6ImVzdGVmYW55IGNhc3Rhw7FvIHNlcm5hIiwiZW1haWwiOiJzdGVmYWNzMTRAZ21haWwuY29tIiwiaWF0IjoxNzM0MTk3OTE2LCJleHAiOjE3MzQyMDA2MTZ9.JNjqoHcuM-vSJC2zfgvUa2ON87LVMmgBoR40H0e1Z88",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    // \"id\": \"UUID\",\r\n    \"title\": \"hacer prueba de nestjs\",\r\n    \"description\": \"crear una api de todos\",\r\n    // \"status\": \"enum con pending, in-progress, completed\",\r\n    \"createdAt\": \"2024-12-12\",\r\n    \"updatedAt\": \"2024-12-12\",\r\n    \"userId\": 2 // extraer del token\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/task/fe30a79d-75c0-4c4b-a013-4107a630467c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"task",
+						"fe30a79d-75c0-4c4b-a013-4107a630467c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test-private",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6InNhbnRpYWdvIHNpZXJyYSBjYW5vIiwiZW1haWwiOiJzYW50aXNjYW5vQGdtYWlsLmNvbSIsImlhdCI6MTczNDE4NzU5MiwiZXhwIjoxNzM0MTg4NDkyfQ.cp72wm_pmaFYzbJpJZmfM3yrsrFUBbDBHjCwQBRkyLo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"santiscano@gmail.com\",\r\n    \"password\": \"Santiago123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/test-auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"test-auth"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
