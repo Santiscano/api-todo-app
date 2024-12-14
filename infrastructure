@@ -1,0 +1,24 @@
+src/
+├── application/
+│   ├── dto/
+│   │   ├── task.dto.ts
+│   ├── services/
+│   |   └── task.service.ts
+├── domain/
+│   ├── entities/
+│   │   └── task.entity.ts
+│   ├── interfaces/
+│   │   └── task.d.ts
+├── infrastructure/
+│   └── controllers/
+│   │   └── task.controller.ts
+│   ├── repositories/
+│   │   └── task.repository.ts
+├── app.module.ts
+
+
+
+
+
+controller "inject" -> service "inject"-> repositoryService "implement"-> interface "implement"-> entity
+controller "implement" -> dto
